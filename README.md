@@ -1,4 +1,4 @@
-Simple plugin that toggles Auto-Download of Oraxen plugin **(https://github.com/oraxen/oraxen)**
+Simple plugin that toggles Auto-Download of resource-pack from Oraxen plugin **(https://github.com/oraxen/oraxen)**
 
 Make sure to disable `send_pack` in `settings.yml` of Oraxen
 
