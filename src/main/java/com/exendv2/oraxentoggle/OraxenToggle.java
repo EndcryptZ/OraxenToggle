@@ -9,6 +9,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
 
 public final class OraxenToggle extends JavaPlugin {
 
@@ -21,59 +23,62 @@ public final class OraxenToggle extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
+        // Register events
         getServer().getPluginManager().registerEvents(new PlayerEvents(this), this);
-        getLogger().info("Plugin Enabled!");
+
+        // Initialize messages and user data
         createMessages();
         createUserDataFolder();
+
+        // Set command executors
         this.getCommand("autorp").setExecutor(new MainCommand(this));
         this.getCommand("oraxentogglereload").setExecutor(new ReloadCommand(this));
+
+        // Initialize player manager
         playerManager = new PlayerManager(this);
 
+        getLogger().info("Plugin Enabled!");
     }
-
 
     @Override
     public void onDisable() {
         getLogger().info("Plugin Disabled!");
-        // Plugin shutdown logic
     }
-
 
     private void createMessages() {
         messagesFile = new File(getDataFolder(), "messages.yml");
-        if(!messagesFile.exists()){
-            getLogger().info("messages.yml file not found!");
-            getLogger().info("Creating the messages.yml file!");
-            messagesFile.getParentFile().mkdirs();
+        if (!messagesFile.exists()) {
+            getLogger().info("messages.yml file not found! Creating...");
             saveResource("messages.yml", false);
         }
-
+        loadMessages();
     }
 
     private void createUserDataFolder() {
         userDataFolder = new File(getDataFolder(), "userdata");
-        if(!userDataFolder.exists()){
-            getLogger().info("userdata folder not found!");
-            getLogger().info("Creating the userdata folder!");
+        if (!userDataFolder.exists()) {
+            getLogger().info("userdata folder not found! Creating...");
             userDataFolder.mkdirs();
         }
-        loadMessages();
     }
 
     public File getUserDataFolder() {
         return userDataFolder;
     }
 
-    public PlayerManager getPlayerManager(){
+    public PlayerManager getPlayerManager() {
         return playerManager;
     }
 
-    public void loadMessages(){
+    public void loadMessages() {
         FileConfiguration messages = YamlConfiguration.loadConfiguration(messagesFile);
         enableMessage = messages.getString("enable-message");
         disableMessage = messages.getString("disable-message");
         prefix = messages.getString("prefix");
+        try {
+            messages.save(messagesFile);
+        } catch (IOException e) {
+            getLogger().log(Level.SEVERE, "Could not save messages.yml", e);
+        }
     }
-
 }
