@@ -14,6 +14,7 @@ import java.util.logging.Level;
 
 public final class OraxenToggle extends JavaPlugin {
 
+    private static OraxenToggle instance;
     private File userDataFolder;
     private File messagesFile;
     public String enableMessage;
@@ -23,6 +24,8 @@ public final class OraxenToggle extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        instance = this;
+
         // Register events
         getServer().getPluginManager().registerEvents(new PlayerEvents(this), this);
 
@@ -80,5 +83,9 @@ public final class OraxenToggle extends JavaPlugin {
         } catch (IOException e) {
             getLogger().log(Level.SEVERE, "Could not save messages.yml", e);
         }
+    }
+
+    public static OraxenToggle getInstance() {
+        return instance;
     }
 }
