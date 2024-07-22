@@ -39,7 +39,7 @@ public class PlayerEvents implements Listener {
     private void taskSendPack(final Player player) {
         (new BukkitRunnable() {
             public void run() {
-                String command = "/oraxen pack send " + player.getName();
+                String command = "oraxen pack send " + player.getName();
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
             }
 
