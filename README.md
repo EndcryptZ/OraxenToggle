@@ -39,7 +39,7 @@ Setting `send_pack: false` ensures that OraxenToggle has full control over when 
 ## 📜 Commands
 
 | Command               | Description                               | Permission            |
-| --------------------- | ----------------------------------------- | --------------------- |
+|-----------------------|-------------------------------------------|-----------------------|
 | `/autorp`             | Toggle auto-download of the resource pack | `oraxentoggle.use`    |
 | `/oraxentogglereload` | Reload the configuration/messages         | `oraxentoggle.reload` |
 
