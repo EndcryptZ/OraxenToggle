@@ -9,6 +9,26 @@ OraxenToggle is a lightweight plugin designed to provide server administrators w
 - **Lightweight & Easy to Use:** Minimal setup required; easy integration with any server running Oraxen.
 - **Configurable:** Customize command names, permissions, and plugin messages.
 
+## 🔧 Setup
+
+Before using OraxenToggle, make sure to disable automatic pack dispatch in Oraxen to enhance flexibility and user experience.  
+Edit your Oraxen `settings.yml` file as follows:
+
+```yaml
+dispatch:
+  send_pack: false
+  send_on_reload: true
+  delay: -1
+  mandatory: true
+  prompt: "<#fa4943>Accept the pack to enjoy a full <b><gradient:#9055FF:#13E2DA>Oraxen</b><#fa4943> experience"
+  join_message:
+    enabled: false
+    delay: -1
+```
+
+> **Note:**  
+> Setting `send_pack: false` ensures that OraxenToggle has full control over when the pack is sent.
+
 ## Installation
 
 1. Download the latest release of OraxenToggle from the [releases page](https://github.com/EndcryptZ/OraxenToggle/releases).
