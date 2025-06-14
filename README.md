@@ -1,56 +1,64 @@
 # OraxenToggle
 
-**OraxenToggle** is a lightweight addon for the [Oraxen plugin](https://github.com/oraxen/oraxen) that allows players to toggle the automatic resource pack download when they join the server.
+OraxenToggle is a lightweight plugin designed to provide simple toggling functionality for the [Oraxen](https://github.com.oraxen/oraxen) Minecraft plugin. This tool allows server administrators and players to enable or disable Oraxen features easily without needing to restart the server or manually edit configuration files.
 
-This gives each player the ability to control whether the Oraxen resource pack is sent to them automatically, enhancing flexibility and user experience.
+## Features
 
+- **Toggle Oraxen Functionality:** Instantly enable or disable Oraxen features with simple commands.
+- **Permission-Based Access:** Restrict toggling commands to authorized users.
+- **Lightweight & Easy to Use:** Minimal setup required; easy integration with existing Oraxen setups.
+- **Configurable:** Customize command names and permissions via the configuration file.
 
-## 🔧 Setup
+## Installation
 
-Before using OraxenToggle, make sure to disable automatic pack dispatch in Oraxen by editing the `settings.yml`:
+1. Download the latest release of OraxenToggle from the [releases page](https://github.com/EndcryptZ/OraxenToggle/releases).
+2. Place the `OraxenToggle.jar` file into your server's `plugins` directory.
+3. Ensure you have the [Oraxen plugin](https://github.com/oraxen/oraxen) installed and configured.
+4. Restart or reload your Minecraft server.
 
-```yaml
-dispatch:
-  send_pack: false
-  send_on_reload: true
-  delay: -1
-  mandatory: true
-  prompt: "<#fa4943>Accept the pack to enjoy a full <b><gradient:#9055FF:#13E2DA>Oraxen</b><#fa4943> experience"
-  join_message:
-    enabled: false
-    delay: -1
+## Usage
+
+- **Command:**  
+  `/oraxentoggle`  
+  Toggles the Oraxen plugin state (enabled/disabled).
+
+- **Permissions:**  
+  `oraxentoggle.toggle` - Allows a user to use the toggle command.
+
+### Example
+
+```
+/oraxentoggle
 ```
 
-Setting `send_pack: false` ensures that OraxenToggle has full control over when the pack is sent.
+The plugin will respond with the new state of Oraxen (enabled or disabled).
 
-## 💡 Features
+## Configuration
 
-* Lets players individually toggle whether the resource pack is sent on join
-* Fully configurable `messages.yml` file
-* Simple and efficient with no bloat
+A default configuration file will be generated in the `plugins/OraxenToggle` directory after the first run. You can customize:
 
-## 📜 Commands
+- Command aliases
+- Permission nodes
+- Messages shown to players
 
-| Command               | Description                               | Permission            |
-|-----------------------|-------------------------------------------|-----------------------|
-| `/autorp`             | Toggle auto-download of the resource pack | `oraxentoggle.use`    |
-| `/oraxentogglereload` | Reload the configuration/messages         | `oraxentoggle.reload` |
+## Contributing
 
-## 📂 Configuration
+Contributions, issues, and feature requests are welcome!
 
-`messages.yml` lets you customize the toggle messages shown to players.
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a pull request
 
-## 📌 Requirements
+## License
 
-* Minecraft server using [Spigot](https://www.spigotmc.org/) or a fork (Paper, Purpur, etc.)
-* [Oraxen Plugin](https://github.com/oraxen/oraxen)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 🧩 Plugin Compatibility
+## Credits
 
-* ✅ Tested with latest Oraxen versions
-* ✅ Supports most Spigot forks
+Developed by [EndcryptZ](https://github.com/EndcryptZ)
 
-## 🔗 Links
+---
 
-* [OraxenToggle on GitHub](https://github.com/EndcryptZ/OraxenToggle)
-* [Oraxen Plugin](https://github.com/oraxen/oraxen)
+*OraxenToggle is an unofficial add-on and is not affiliated with or endorsed by Oraxen.*
