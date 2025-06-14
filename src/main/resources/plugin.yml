@@ -2,13 +2,6 @@ name: OraxenToggle
 version: '${project.version}'
 main: com.exendv2.oraxentoggle.OraxenToggle
 api-version: '1.20'
-author: ExEndV2
-commands:
-  autorp:
-    description: Toggles Auto-Download of Resource Pack
-    usage: /autorp
-  oraxentogglereload:
-    description: Toggles Auto-Download of Resource Pack
-    usage: /oraxentogglereload
-    permission: oraxentoggle.reload
-    permission-message: "&cYou don't have permission to use this command!"
+author: Endcrpyt
+depend:
+  - Oraxen

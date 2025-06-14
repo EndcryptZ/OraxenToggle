@@ -1,3 +1,3 @@
-prefix: "&x&0&8&4&C&F&BR&x&1&6&5&A&F&Be&x&2&4&6&8&F&Bs&x&3&1&7&6&F&Cr&x&3&F&8&4&F&Co&x&4&D&9&2&F&Cu&x&5&B&A&0&F&Cc&x&6&8&A&D&F&Ce &x&7&6&B&B&F&CP&x&8&4&C&9&F&Da&x&9&2&D&7&F&Dc&x&9&F&E&5&F&Dk&x&A&D&F&3&F&D: "
-disable-message: "&aDisabled Auto-Download!"
-enable-message: "&aEnabled Auto-Download!"
+prefix: "<white>[<blue>OraxenToggle<white>]: "
+disable-message: "<green>Disabled Auto-Download!"
+enable-message: "<green>Enabled Auto-Download!"
