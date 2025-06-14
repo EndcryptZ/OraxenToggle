@@ -1,13 +1,13 @@
 # OraxenToggle
 
-OraxenToggle is a lightweight plugin designed to provide simple toggling functionality for the [Oraxen](https://github.com.oraxen/oraxen) Minecraft plugin. This tool allows server administrators and players to enable or disable Oraxen features easily without needing to restart the server or manually edit configuration files.
+OraxenToggle is a lightweight plugin designed to provide server administrators with control over the **Oraxen resource pack auto-download feature**. With this plugin, you can easily enable or disable the automatic download of the Oraxen resource pack for players, without needing to restart the server or manually alter configuration files.
 
 ## Features
 
-- **Toggle Oraxen Functionality:** Instantly enable or disable Oraxen features with simple commands.
+- **Toggle Oraxen Resource Pack Download:** Instantly enable or disable the automatic resource pack prompt for players.
 - **Permission-Based Access:** Restrict toggling commands to authorized users.
-- **Lightweight & Easy to Use:** Minimal setup required; easy integration with existing Oraxen setups.
-- **Configurable:** Customize command names and permissions via the configuration file.
+- **Lightweight & Easy to Use:** Minimal setup required; easy integration with any server running Oraxen.
+- **Configurable:** Customize command names, permissions, and plugin messages.
 
 ## Installation
 
@@ -20,7 +20,7 @@ OraxenToggle is a lightweight plugin designed to provide simple toggling functio
 
 - **Command:**  
   `/oraxentoggle`  
-  Toggles the Oraxen plugin state (enabled/disabled).
+  Toggles the Oraxen resource pack auto-download state (enabled/disabled).
 
 - **Permissions:**  
   `oraxentoggle.toggle` - Allows a user to use the toggle command.
@@ -31,7 +31,7 @@ OraxenToggle is a lightweight plugin designed to provide simple toggling functio
 /oraxentoggle
 ```
 
-The plugin will respond with the new state of Oraxen (enabled or disabled).
+The plugin will respond with the new state of the Oraxen resource pack auto-download feature.
 
 ## Configuration
 
